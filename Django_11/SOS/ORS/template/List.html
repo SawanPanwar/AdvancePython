@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="" action="">
+{% csrf_token %}
+    <a href="/ORS/red">For Registration</a>
+<table>
+    {% for l in list %}
+    <tr>
+        <td>{{l.id}}</td>
+        <td>{{l.firstName}}</td>
+        <td>{{l.lastName}}</td>
+        <td>{{l.email}}</td>
+        <td>{{l.password}}</td>
+        <td><a href="/ORS/edit/{{l.id}}">edit</a></td>
+        <td><a href="/ORS/del/{{l.id}}">delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+</form>
+</body>
+</html>

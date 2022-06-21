@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form method="" action="">
+{% csrf_token %}
+    {% if flag %}
+
+    <h1 style="color : red;" >IFFFFFFFFFFFFFFFFFFF</h1>
+
+    {% endif %}
+
+<table>
+
+     <tr>
+        <th>ID</th>
+         <td></td>
+         <td></td>
+        <th>NAME</th>
+    </tr>
+    {% for l in list %}
+    <tr>
+        <td>{{l.id}}</td>
+        <td></td>
+        <td></td>
+        <td>{{l.name}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</form>
+
+</body>
+</html>
